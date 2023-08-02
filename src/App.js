@@ -1,7 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
+const PassingProsComponent = ({ children, ...props }) => (
+  <div>
+    {children}
+    {...props}
+  </div>
+);
+
+function App({ ...props }) {
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +24,8 @@ function App() {
         >
           Learn Reac
         </a>
+
+        <PassingProsComponent {...props}>123</PassingProsComponent>
       </header>
     </div>
   );
