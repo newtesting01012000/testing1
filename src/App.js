@@ -1,7 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
+const PassingProsComponent = ({ children, ...props }) => (
+  <div>
+    {children}
+    {...props}
+  </div>
+);
+
+function App({ ...props }) {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,8 +22,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Reactt
+          Learn Reac
         </a>
+
+        <PassingProsComponent {...props}>123</PassingProsComponent>
       </header>
     </div>
   );
