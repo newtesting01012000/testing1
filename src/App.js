@@ -4,10 +4,11 @@ import "./App.css";
 const PassingProsComponent = (props) => {
   const { isDisabled, ...rest } = props;
   return (
-    <div>
-      {isDisabled}
-      {...rest}
+    <div {...rest}>
+      {isDisabled ? 'Disabled' : 'Enabled'}
     </div>
+  );
+};
   );
 };
 
