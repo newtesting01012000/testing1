@@ -1,12 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-const PassingProsComponent = ({ children, ...props }) => (
-  <div>
-    {children}
-    {...props}
-  </div>
-);
+const PassingProsComponent = (props) => {
+  const { isDisabled, ...rest } = props;
+  return (
+    <div {...rest}>
+      {isDisabled ? 'Disabled' : 'Enabled'}
+    </div>
+  );
+};
+  );
+};
 
 function App({ ...props }) {
   return (
