@@ -2,17 +2,12 @@ import logo from "./logo.svg";
 import "./App.css";
 
 const PassingProsComponent = (props) => {
-  const { isDisabled, ...rest } = props;
-  return (
-    <div {...rest}>
-      {isDisabled ? 'Disabled' : 'Enabled'}
-    </div>
-  );
-};
-  );
+  const { isBoolean, ...rest } = props;
+  return <div {...rest}>{isBoolean ? "True" : "False"}</div>;
 };
 
-function App({ ...props }) {
+function App() {
+  const definedProps = { isBoolean: true };
   return (
     <div className="App">
       <header className="App-header">
@@ -26,10 +21,10 @@ function App({ ...props }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Reac
+          Learn React
         </a>
 
-        <PassingProsComponent {...props}>123</PassingProsComponent>
+        <PassingProsComponent {...definedProps}>123</PassingProsComponent>
       </header>
     </div>
   );
