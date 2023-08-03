@@ -24,7 +24,9 @@ function App() {
           Learn React
         </a>
 
-        <PassingProsComponent {...definedProps}>123</PassingProsComponent>
+        <PassingProsComponent {...{ entry, definedProps }}>
+          123
+        </PassingProsComponent>
       </header>
     </div>
   );
