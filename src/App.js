@@ -25,7 +25,7 @@ function App(props) {
           Learn React
         </a>
 
-        <PassingProsComponent {...props}>123</PassingProsComponent>
+        <PassingProsComponent {...{ entry, props }}>123</PassingProsComponent>
       </header>
     </div>
   );
