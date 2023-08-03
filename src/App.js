@@ -1,12 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-const PassingProsComponent = (props) => {
-  const { isBoolean, ...rest } = props;
-  return <div {...rest}>{isBoolean ? "True" : "False"}</div>;
+const PassingProsComponent = ({ prop1, prop2 }) => {
+  //const { isBoolean, ...rest } = props;
+  //return <div {...rest}>{isBoolean ? "True" : "False"}</div>;
+  return (
+    <div>
+      {prop1}
+      {prop2}
+    </div>
+  );
 };
 
-function App(props) {
+function App() {
   const definedProps = { isBoolean: true };
   const entry = 1;
   return (
@@ -25,7 +31,9 @@ function App(props) {
           Learn React
         </a>
 
-        <PassingProsComponent {...props}>123</PassingProsComponent>
+        <PassingProsComponent prop1="1" prop2="2">
+          123
+        </PassingProsComponent>
       </header>
     </div>
   );
