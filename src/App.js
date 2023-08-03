@@ -12,6 +12,17 @@ const PassingProsComponent = ({ prop1, prop2 }) => {
   );
 };
 
+const PassingProsComponent2 = ({ prop1, prop2 }) => {
+  //const { isBoolean, ...rest } = props;
+  //return <div {...rest}>{isBoolean ? "True" : "False"}</div>;
+  return (
+    <div>
+      {prop1}
+      {prop2}
+    </div>
+  );
+};
+
 function App() {
   const definedProps = { isBoolean: true };
   const entry = 1;
@@ -31,9 +42,15 @@ function App() {
           Learn React
         </a>
 
-        <PassingProsComponent prop1="1" prop2="2">
+        {/* <PassingProsComponent prop1="1" prop2="2">
           123
         </PassingProsComponent>
+        <PassingProsComponent prop1="1" prop3="2">
+          123
+        </PassingProsComponent> */}
+        <PassingProsComponent2 prop1="1" prop3="2">
+          123
+        </PassingProsComponent2>
       </header>
     </div>
   );
