@@ -6,8 +6,9 @@ const PassingProsComponent = (props) => {
   return <div {...rest}>{isBoolean ? "True" : "False"}</div>;
 };
 
-function App() {
+function App(props) {
   const definedProps = { isBoolean: true };
+  const entry = 1;
   return (
     <div className="App">
       <header className="App-header">
@@ -24,7 +25,7 @@ function App() {
           Learn React
         </a>
 
-        <PassingProsComponent {...definedProps}>123</PassingProsComponent>
+        <PassingProsComponent {...props}>123</PassingProsComponent>
       </header>
     </div>
   );
