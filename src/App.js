@@ -34,6 +34,9 @@ function App() {
         <PassingProsComponent prop1="1" prop2="2">
           123
         </PassingProsComponent>
+        <PassingProsComponent prop1="1" prop3="2">
+          123
+        </PassingProsComponent>
       </header>
     </div>
   );
